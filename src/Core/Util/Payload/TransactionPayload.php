@@ -264,10 +264,7 @@ class TransactionPayload extends AbstractPayload
 			$lineItems[] = $shippingLineItem;
 		}
 
-		$adjustmentLineItem = $this->getAdjustmentLineItem($lineItems);
-		if (!is_null($adjustmentLineItem)) {
-			$lineItems[] = $adjustmentLineItem;
-		}
+        // removed getAdjustmentLineItem() call because of custom products
 
 		return $lineItems;
 	}
